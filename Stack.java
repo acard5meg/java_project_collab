@@ -1,6 +1,7 @@
 /**
  * Build parameterized Stack data structure to allow calculator to perform 
  * undo method
+ * Change
  */
 public class Stack <E> {
 	private class Node {
