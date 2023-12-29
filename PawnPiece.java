@@ -13,15 +13,21 @@ public class PawnPiece extends Piece{
     private boolean hasCapture;
     private boolean isCaptured;
 
-    public PawnPiece() {
+    public PawnPiece(char name, boolean isBlocked, boolean hasMoved, boolean hasCapture, boolean isCaptured) {
         super();
-        name = 'p';
-        isBlocked = false;
-        hasMoved = false;
-        hasCapture = false;
-        isCaptured = false;
-
-
+        this.name = name;
+        this.isBlocked = isBlocked;
+        this.hasMoved = hasMoved;
+        this.hasCapture = hasCapture;
+        this.isCaptured = isCaptured;
+    }
+    
+    public PawnPiece() {
+        this('p',false,false,false,false);
+    }
+    
+    public PawnPiece(char name) {
+        this(name,false,false,false,false);
     }
 
     private boolean getBlocked(){
@@ -42,6 +48,10 @@ public class PawnPiece extends Piece{
 
     public boolean validMove(ChessBoard cb){
         return true;
+    }
+    
+    public char getName() {
+    	return name;
     }
 
 }
